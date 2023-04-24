@@ -11,7 +11,7 @@ import java.util.List;
 @RestController
 public class UsuarioController {
 
-
+    
     @RequestMapping(value = "usuario/{id}")
     public Usuario getUsuario(@PathVariable Long id){
         Usuario usuario = new Usuario();
