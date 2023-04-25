@@ -1,5 +1,6 @@
 package com.cursojava.models;
 
+import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -14,7 +15,7 @@ import lombok.ToString;
 public class Usuario {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
     @Column(name = "nombre")
@@ -23,6 +24,7 @@ public class Usuario {
     private String apellido;
     @Column(name = "email")
     private String email;
+    @Nullable
     @Column(name = "telefono")
     private String telefono;
     @Column(name = "password")
