@@ -11,14 +11,14 @@
             const response = await fetch('api/usuarios');
             if (response.status === 200) {
                 const usuarios = await response.json();
-                console.log(usuarios)
                 let listadoHtml = '';
                 for (const usuario of usuarios) {
+                    let telefonoPipe = usuario.telefono != null?usuario.telefono:'------';
                     let usuarioHtml = '<tr> ' +
-                        '<td>'+usuario.id + '</td>' +
-                        '<td>'+usuario.nombre +'</td>' +
-                        '<td>'+usuario.email + '</td>' +
-                        '<td>'+usuario.telefono + '</td>' +
+                        '<td>'+ usuario.id + '</td>' +
+                        '<td>'+ usuario.nombre +'</td>' +
+                        '<td>'+ usuario.email + '</td>' +
+                        '<td>'+ telefonoPipe + '</td>' +
                         '<td>  ' +
                         ' <a href="#"  ' +
                         'onclick="eliminarUsuario(' +  usuario.id + ')' +

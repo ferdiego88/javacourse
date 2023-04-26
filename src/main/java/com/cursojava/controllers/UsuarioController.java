@@ -32,6 +32,7 @@ public class UsuarioController {
 
     @RequestMapping(value = "api/usuarios",method = RequestMethod.POST)
     public Usuario addUsuarios(@RequestBody Usuario usuario) {
+        usuario.getPassword();
         return usuarioDao.registrar(usuario);
     }
 

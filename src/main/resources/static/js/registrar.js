@@ -19,6 +19,7 @@ const registrarUsuarios = async () => {
     }
 
     try {
+
         const response = await fetch('api/usuarios',
             {   method:'POST',
                     body: JSON.stringify(usuario),
