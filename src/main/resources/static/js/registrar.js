@@ -29,6 +29,9 @@ const registrarUsuarios = async () => {
                 });
         const usuarios = await response.json();
 
+        alert("La cuenta fue creada con exito!")
+        window.location.href = 'usuarios.html';
+
     }   catch (e) {
         console.log(e)
     }
